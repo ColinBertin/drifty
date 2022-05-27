@@ -27,23 +27,24 @@ export default function path(lat, lng, pathTime, dt = 600) {
   dt *= 1e-3;
 
   coords = fetchData(coords, dt, 0, nSteps);
-  // for (let i = 0; i < nSteps; i++) {
-  //   let latitude = coords[i][0];
-  //   let longitude = coords[i][1];
-
-    // console.log(latitude, longitude)
-    // fetch(`http://127.0.0.1:5000?lon=${longitude}&lat=${latitude}`)
-    //   .then(res => res.json())
-    //   .then(data => {
-    //     console.log(data)
-    //     longitude += data.wind_u * dt;
-    //     latitude += data.wind_v * dt;
-
-    //     [latitude, longitude]
-    //   });
-    // let vLat = 1.0 * scale;
-    // let vLng = Math.cos((lng / 90) * (100 * Math.PI)) * scale * 10;
-  // }
   console.log(coords)
   return coords;
 }
+
+// for (let i = 0; i < nSteps; i++) {
+//   let latitude = coords[i][0];
+//   let longitude = coords[i][1];
+
+  // console.log(latitude, longitude)
+  // fetch(`http://127.0.0.1:5000?lon=${longitude}&lat=${latitude}`)
+  //   .then(res => res.json())
+  //   .then(data => {
+  //     console.log(data)
+  //     longitude += data.wind_u * dt;
+  //     latitude += data.wind_v * dt;
+
+  //     [latitude, longitude]
+  //   });
+  // let vLat = 1.0 * scale;
+  // let vLng = Math.cos((lng / 90) * (100 * Math.PI)) * scale * 10;
+// }
