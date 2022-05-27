@@ -14,7 +14,7 @@ const coords = {
   longitude: 139.839478
 }
 
-const latlngs = path(coords.latitude, coords.longitude, (6 * 3600), 600)
+const latlngs = path(coords.latitude, coords.longitude, (2 * 600), 600)
 
 export default function Map() {
   function LocationMarker() {
@@ -31,7 +31,7 @@ export default function Map() {
         const circle = L.circle(e.latlng, radius);
         circle.addTo(map);
         setBbox(e.bounds.toBBoxString().split(","));
-        console.log(e.latlng)
+        // console.log(e.latlng)
       });
     }, [map]);
 
